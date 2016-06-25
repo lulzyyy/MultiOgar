@@ -28,7 +28,7 @@ function PlayerTracker(gameServer, socket) {
     this.spectate = false;
     this.freeRoam = false; // Free-roam mode enables player to move in spectate mode (by pressing Q in spectate mode)
 	this.spectateLargest = true; // spectate the largest client by default (or by pressing Space in spectate mode)
-	this.spectateEveryone = false; // spectate every player with cells by (by pressing W in spectate mode)
+	this.spectateEveryone = false; // spectate next player from client list (alive) (by pressing W in spectate mode)
 	this.specPlayer = undefined;
 	this.specPlayerNumber = -1;
 
