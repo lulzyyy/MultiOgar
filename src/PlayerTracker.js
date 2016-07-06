@@ -24,6 +24,8 @@ function PlayerTracker(gameServer, socket) {
     this.isMassChanged = true;
     this.borderCounter = 0;
 
+    this.clientOrigin = "";
+
     this.mouse = {
         x: 0,
         y: 0
@@ -149,6 +151,10 @@ PlayerTracker.prototype.getNameUnicode = function () {
 
 PlayerTracker.prototype.getSkinUtf8 = function () {
     return this._skinUtf8;
+}
+
+PlayerTracker.prototype.getClientorigin = function () {
+    return this.clientOrigin;
 }
 
 PlayerTracker.prototype.getColor = function (color) {
