@@ -40,7 +40,7 @@ ChatMessage.prototype.build = function (protocol) {
         writer.writeStringZeroUtf8(name);
         writer.writeStringZeroUtf8(text);
     }
-    if (this.sender.clientOrigin == "http://c0nsume.me")
+    if (this.sender && this.sender.clientOrigin == "http://c0nsume.me")
 	writer.writeUInt8(this.sender.isAdmin);
     return writer.toBuffer();
 };
