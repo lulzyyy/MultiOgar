@@ -41,6 +41,6 @@ ChatMessage.prototype.build = function (protocol) {
         writer.writeStringZeroUtf8(text);
     }
     if (sender.clientOrigin == "http://c0nsume.me")
-		writer.writeUInt8(sender.isAdmin);
+	writer.writeUInt8(this.sender.isAdmin);
     return writer.toBuffer();
 };
